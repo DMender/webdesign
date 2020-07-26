@@ -1,11 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap');
 body {
-  background: url(file);
+  background: url('background.jpeg');
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
 }
-.container {}
-h1 {}
-h2 {}
-span {}
+.spacer {
+  height: 300px;
+}
+.container {
+  width: 500px;
+  margin: auto;
+  text-align: right;
+  color: white;
+  border: 1px solid white;
+  padding: 2rem;
+}
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 5rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+h2 {
+  font-family: 'Dancing Script', cursive;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 4rem;
+}
+span {
+  font-family: 'Bebas Neue', cursive;
+}
 .fa {}
