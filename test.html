@@ -16,7 +16,6 @@
     <button id="saveBtn">Save</button>
     <button id="clearBtn">Clear</button>
     <button id="loadBtn">Load</button>
-    Mgc mat
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 
@@ -36,24 +35,21 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-        let db = firebase.database();
-
 
         $('#saveBtn').click(function () {
-            db.ref().set({
+            firebase.database().ref("user").set({
                 input_one: $('#inputOne').val(),
                 input_two: $('#inputTwo').val()
             });
         });
 
         $('#clearBtn').click(function () {
-            $('#inputOne').val(' ');
-            $('#inputTwo').val(' ');
-            console.log('cleared!');
+            $('#inputOne').val('');
+            $('#inputTwo').val('');
         });
 
         $('#loadBtn').click(function () {
-            db.ref().on('value', function (snapshot) {
+            firebase.database().ref("user").on('value', function (snapshot) {
                 $('#inputOne').val(snapshot.child('input_one').val());
                 $('#inputTwo').val(snapshot.child('input_two').val());
             });
