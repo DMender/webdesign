@@ -16,33 +16,31 @@
     <button id="saveBtn">Save</button>
     <button id="clearBtn">Clear</button>
     <button id="loadBtn">Load</button>
-Mgc mat
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    Mgc mat
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAije5M0yEYmGyAuofXrXHMr0XRPXUmjfw",
-    authDomain: "mouseguard-fee40.firebaseapp.com",
-    databaseURL: "https://mouseguard-fee40.firebaseio.com",
-    projectId: "mouseguard-fee40",
-    storageBucket: "mouseguard-fee40.appspot.com",
-    messagingSenderId: "952297786783",
-    appId: "1:952297786783:web:800cd588154852adb081aa"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
     <script>
-        var database = firebase.database().ref().child('onetwo');
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAije5M0yEYmGyAuofXrXHMr0XRPXUmjfw",
+            authDomain: "mouseguard-fee40.firebaseapp.com",
+            databaseURL: "https://mouseguard-fee40.firebaseio.com",
+            projectId: "mouseguard-fee40",
+            storageBucket: "mouseguard-fee40.appspot.com",
+            messagingSenderId: "952297786783",
+            appId: "1:952297786783:web:800cd588154852adb081aa"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let db = firebase.database();
 
 
         $('#saveBtn').click(function () {
-            database.set({
+            db.ref().set({
                 input_one: $('#inputOne').val(),
                 input_two: $('#inputTwo').val()
             });
@@ -55,7 +53,7 @@ Mgc mat
         });
 
         $('#loadBtn').click(function () {
-            database.on('value', function (snapshot) {
+            db.ref().on('value', function (snapshot) {
                 $('#inputOne').val(snapshot.child('input_one').val());
                 $('#inputTwo').val(snapshot.child('input_two').val());
             });
