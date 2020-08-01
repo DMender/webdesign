@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    One: <input id="inputOne" type="text"><br />
-    Two: <input id="inputTwo" type="text"><br />
+    Message: <input id="inputOne" type="text"><br />
+    Other Message: <input id="inputTwo" type="text"><br />
     <button id="saveBtn">Save</button>
     <button id="clearBtn">Clear</button>
     <button id="loadBtn">Load</button>
@@ -35,7 +35,7 @@
         firebase.initializeApp(firebaseConfig);
 
         $('#saveBtn').click(function () {
-            firebase.database().ref().set({
+            firebase.database().ref('variables').set({
                 input_one: $('#inputOne').val(),
                 input_two: $('#inputTwo').val()
             });
@@ -47,7 +47,7 @@
         });
 
         $('#loadBtn').click(function () {
-            firebase.database().ref().on('value', function (snapshot) {
+            firebase.database().ref('variables').on('value', function (snapshot) {
                 $('#inputOne').val(snapshot.child('input_one').val());
                 $('#inputTwo').val(snapshot.child('input_two').val());
             });
