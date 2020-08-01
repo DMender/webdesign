@@ -16,24 +16,28 @@
     <button id="saveBtn">Save</button>
     <button id="clearBtn">Clear</button>
     <button id="loadBtn">Load</button>
+Mgc mat
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
 
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAije5M0yEYmGyAuofXrXHMr0XRPXUmjfw",
+    authDomain: "mouseguard-fee40.firebaseapp.com",
+    databaseURL: "https://mouseguard-fee40.firebaseio.com",
+    projectId: "mouseguard-fee40",
+    storageBucket: "mouseguard-fee40.appspot.com",
+    messagingSenderId: "952297786783",
+    appId: "1:952297786783:web:800cd588154852adb081aa"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
     <script>
-        // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyBsVqgv0meeMuo2m1_N0Ro6rwhKF-Bw_TY",
-    authDomain: "first-try-c8ce1.firebaseapp.com",
-    databaseURL: "https://first-try-c8ce1.firebaseio.com",
-    projectId: "first-try-c8ce1",
-    storageBucket: "first-try-c8ce1.appspot.com",
-    messagingSenderId: "759509358211",
-    appId: "1:759509358211:web:432019c87e1b6c8a1c2db6"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
         var database = firebase.database().ref().child('onetwo');
 
 
