@@ -22,13 +22,19 @@
       <i class="fa fa-gamepad" id="retro"></i>
     </div>
     <script>
-      $("#boat").click(function() {
-        $("#style").attr("href", "style_boat.css");
-        $(".bookend").removeClass("fa-anchor fa-gamepad").addClass("fa-anchor");
-      });
-      $("#retro").click(function() {
-        $("#style").attr("href", "style_retro.css");
-        $(".bookend").removeClass("fa-anchor fa-gamepad").addClass("fa-gamepad");
+      $( document ).ready(function() {
+        $("#boat").click(function() {
+          $("#style").attr("href", "style_boat.css");
+          $(".container").css("visibility", "hidden");
+          $(".bookend").removeClass("fa-anchor fa-gamepad").addClass("fa-anchor");
+          $(".container").fadeTo(20,0).css("visibility", "visible").fadeTo(1000,1);
+        });
+        $("#retro").click(function() {
+          $("#style").attr("href", "style_retro.css");
+          $(".container").css("visibility", "hidden");
+          $(".bookend").removeClass("fa-anchor fa-gamepad").addClass("fa-gamepad");
+          $(".container").fadeTo(20,0).css("visibility", "visible").fadeTo(1000,1);
+        });
       });
     </script>
   </body>

@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Permanent+Marker&family=Press+Start+2P&display=swap');
-@-webkit-keyframes show {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
 body {
+  background-color: black;
   background: url('background_retro.jpeg');
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-position: center;
-  -webkit-animation: show 2s 1;
 }
 .spacer {
   height: 50px;

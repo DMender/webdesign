@@ -4,11 +4,12 @@
   100% { opacity: 1; }
 }
 body {
+  background-color: black;
   background: url('background_boat.jpeg');
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-position: center;
-  -webkit-animation: show 2s 1;
+  -webkit-animation: show 1s 1;
 }
 .spacer {
   height: 150px;
