@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrew Cook | Web Developer</title>
-    <link rel="stylesheet" type="text/css" href="style_boat.css">
+    <link id="style" rel="stylesheet" type="text/css" href="style_boat.css">
     <script src="https://use.fontawesome.com/d93912ae3b.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
@@ -13,9 +13,23 @@
     <div class="container">
       <h1>Andrew Cook</h1>
       <h2>Web Developer</h2>
-      <i class="fa fa-anchor" aria-hidden="true"></i>
+      <i class="fa fa-anchor bookend" aria-hidden="true"></i>
       <span> 801.897.4120 | AndrewCookWebDesign@gmail.com </span>
-      <i class="fa fa-anchor" aria-hidden="true"></i>
+      <i class="fa fa-anchor bookend" aria-hidden="true"></i>
     </div>
+    <div class="styles">
+      <i class="fa fa-anchor" aria-hidden="true" id="boat"></i>
+      <i class="fa fa-gamepad" id="retro"></i>
+    </div>
+    <script>
+      $("#boat").click(function() {
+        $("#style").attr("href", "style_boat.css");
+        $(".bookend").removeClass("fa-anchor fa-gamepad").addClass("fa-anchor");
+      });
+      $("#retro").click(function() {
+        $("#style").attr("href", "style_retro.css");
+        $(".bookend").removeClass("fa-anchor fa-gamepad").addClass("fa-gamepad");
+      });
+    </script>
   </body>
 </html>

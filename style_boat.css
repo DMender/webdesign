@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap');
+@-webkit-keyframes show {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 body {
   background: url('background_boat.jpeg');
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
+  -webkit-animation: show 2s 1;
 }
 .spacer {
   height: 150px;
@@ -15,6 +20,13 @@ body {
   color: white;
   border: 1px solid white;
   padding: 2rem;
+}
+.styles {
+  max-width: 500px;
+  margin: auto;
+  text-align: right;
+  color: white;
+  padding: 1rem;
 }
 h1 {
   font-family: 'Bebas Neue', cursive;
@@ -31,7 +43,8 @@ h2 {
 span {
   font-family: 'Bebas Neue', cursive;
 }
-.fa {}
+.fa {
+}
 
 @media only screen and (min-width: 600px) {
   .spacer {
