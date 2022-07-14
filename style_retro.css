@@ -3,7 +3,7 @@ body {
   background-color: black;
   background: url('background_retro.jpeg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   background-position: center;
 }
 .spacer {
