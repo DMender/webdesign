@@ -60,7 +60,9 @@ img {
   border-color: white;
   border-width: 3px;
 }
-.fa {
+.fa{}
+.styles .fa::before {
+  font-size: 2.5rem;
 }
 .styles .fa:hover {
   color: rgb(128, 128, 128)
@@ -75,10 +77,16 @@ a:active {
   .spacer {
     height: 100px;
   }
+  .styles .fa::before {
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (min-width: 900px) {
   .spacer {
     height: 150px;
+  }
+  .styles .fa::before {
+    font-size: 1rem;
   }
 }

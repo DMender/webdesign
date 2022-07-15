@@ -64,6 +64,12 @@ img {
 }
 .fa {
 }
+.styles .fa::before {
+  font-size: 2.5rem;
+}
+.styles .fa::before {
+  font-size: 2.5rem;
+}
 .styles .fa:hover {
   color: rgb(135, 206, 235)
 }
@@ -77,10 +83,16 @@ a:active {
   .spacer {
     height: 100px;
   }
+  .styles .fa::before {
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (min-width: 900px) {
   .spacer {
     height: 150px;
+  }
+  .styles .fa::before {
+    font-size: 1rem;
   }
 }
