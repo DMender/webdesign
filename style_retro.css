@@ -13,9 +13,10 @@ body {
   max-width: 500px;
   margin: auto;
   text-align: right;
-  color: rgb(255, 0, 255);
-  border: 1px solid rgb(255, 255, 0);
+  color: rgb(255, 255, 0);
+  border: 5px solid rgb(255, 0, 255);
   padding: 2rem;
+  display: none;
 }
 .styles {
   max-width: 500px;
@@ -36,21 +37,39 @@ h2 {
   margin-top: 0;
   padding-top: 0;
   margin-bottom: 4rem;
+  color: rgb(255, 0, 255);
+}
+h3 {
+  font-family: 'Monoton', cursive;
+  font-size: 3rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+h4 {
+  font-family: 'Permanent Marker', cursive;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 2rem;
   color: rgb(255, 255, 0);
 }
-span {
+span, p, a {
   font-family: 'Press Start 2P', cursive;
   color: rgb(255, 0, 255);
-  font-size: 0.5rem;
+  font-size: 0.rem;
+}
+img {
+  width: 70%;
+  padding: 4rem;
+  background: url('triangle.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 .fa {
   color: rgb(255, 255, 0);
   margin-right: 0.3rem;
 }
 .styles .fa:hover {
-  color: rgb(255, 0, 255);
-}
-a {
   color: rgb(255, 0, 255);
 }
 a:hover{
