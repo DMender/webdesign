@@ -27,13 +27,13 @@ body {
 }
 h1 {
   font-family: 'Monoton', cursive;
-  font-size: 5rem;
+  font-size: 3rem;
   margin-bottom: 0;
   padding-bottom: 0;
 }
 h2 {
   font-family: 'Permanent Marker', cursive;
-  font-size: 4rem;
+  font-size: 2rem;
   margin-top: 0;
   padding-top: 0;
   margin-bottom: 4rem;
@@ -55,7 +55,7 @@ h4 {
 span, p, a {
   font-family: 'Press Start 2P', cursive;
   color: rgb(255, 0, 255);
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 img {
   width: 70%;
@@ -86,13 +86,16 @@ a:active {
     height: 100px;
   }
   h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .styles .fa::before {
     font-size: 2rem;
+  }
+  span, p, a {
+    font-size: 0.8rem;
   }
 }
 
@@ -101,12 +104,15 @@ a:active {
     height: 150px;
   }
   h1 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
   h2 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .styles .fa::before {
     font-size: 1rem;
+  }
+  span, p, a {
+    font-size: 0.9rem;
   }
 }
