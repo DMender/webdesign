@@ -29,7 +29,6 @@ h1 {
   font-size: 5rem;
   margin-bottom: 0;
   padding-bottom: 0;
-  max-width: 90vw;
 }
 h2 {
   font-family: 'Permanent Marker', cursive;
@@ -64,10 +63,22 @@ a:active {
   .spacer {
     height: 100px;
   }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (min-width: 900px) {
   .spacer {
     height: 150px;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
   }
 }
