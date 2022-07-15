@@ -1,15 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap');
-@-webkit-keyframes show {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
 body {
-  background-color: burlywood !important;
-  background: url('background_boat.jpeg');
-  background-repeat: no-repeat;
-  background-size: auto;
+  background-color: rgb(135, 206, 235) !important;
+  background: url('background_polka.svg');
+  background-repeat: repeat;
+  background-size: cover;
   background-position: center;
-  -webkit-animation: show 1s 1;
 }
 .spacer {
   height: 50px;
@@ -18,8 +13,9 @@ body {
   max-width: 500px;
   margin: auto;
   text-align: right;
-  color: white;
-  border: 1px solid white;
+  color: blue;
+  border: 2px solid white;
+  border-radius: 100%;
   padding: 2rem;
   display: none;
 }
@@ -60,7 +56,8 @@ span, p, a {
 }
 img {
   width: 100%;
-  border: 1px solid white;
+  border: 2px solid white;
+  border-radius: 100%;
 }
 .fa {
 }
@@ -71,17 +68,17 @@ img {
   font-size: 2.5rem;
 }
 .styles .fa:hover {
-  color: rgb(135, 206, 235);
+  color: blue;
 }
 a:hover{
-  color: rgb(135, 206, 235);
+  color: blue;
 }
 a:active {
   color: white;
 }
 @media only screen and (min-width: 600px) {
   .spacer {
-    height: 100px;
+    height: 75px;
   }
   .styles .fa::before, .styles span {
     font-size: 2rem;
@@ -90,7 +87,7 @@ a:active {
 
 @media only screen and (min-width: 900px) {
   .spacer {
-    height: 150px;
+    height: 100px;
   }
   .styles .fa::before, .styles span {
     font-size: 1rem;
