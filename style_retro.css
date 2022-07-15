@@ -69,8 +69,11 @@ img {
   color: rgb(255, 255, 0);
   margin-right: 0.3rem;
 }
-.styles .fa::before {
+.styles .fa::before, .styles span {
   font-size: 2.5rem;
+}
+.styles span {
+  color: rgb(255, 255, 0);
 }
 .styles .fa:hover {
   color: rgb(255, 0, 255);
@@ -91,7 +94,7 @@ a:active {
   h2 {
     font-size: 3rem;
   }
-  .styles .fa::before {
+  .styles .fa::before, .styles span {
     font-size: 2rem;
   }
   span, p, a {
@@ -109,7 +112,7 @@ a:active {
   h2 {
     font-size: 4rem;
   }
-  .styles .fa::before {
+  .styles .fa::before, .styles span {
     font-size: 1rem;
   }
   span, p, a {

@@ -44,40 +44,40 @@
     </div>
     <div class="styles">
       <i class="fa fa-2xl fa-angle-left" aria-hidden="true" id="previous"></i>
+      <span>|</span>
       <i class="fa fa-2xl fa-anchor" aria-hidden="true" id="boat"></i>
       <i class="fa fa-2xl fa-gamepad" aria-hidden="true" id="retro"></i>
       <i class="fa fa-2xl fa-square" aria-hidden="true" id="mono"></i>
+      <span>|</span>
       <i class="fa fa-2xl fa-angle-right" aria-hidden="true" id="next"></i>
     </div>
     <script>
-      $( document ).ready(function() {
-        $('<img src="background_retro.jpeg"/>');
-        var page = 0;
-        $(".container").eq(page).toggle();
-        $("#boat").click(function() {
-          $("#style").attr("href", "style_boat.css");
+      $(document).ready(function() { //wait til the DOM loads to run script
+
+        function styleChange(styleGuide, addedClass) { //declare function
+          $("#style").attr("href", styleGuide);
           $(".container").eq(page).css("visibility", "hidden");
           $(".styles").css("visibility", "hidden");
-          $(".bookend").removeClass("fa-anchor fa-gamepad fa-square").addClass("fa-anchor");
+          $(".bookend").removeClass("fa-anchor fa-gamepad fa-square").addClass(addedClass);
           $(".container").eq(page).fadeTo(20,0).css("visibility", "visible").fadeTo(1000,1);
           $(".styles").fadeTo(20,0).css("visibility", "visible").fadeTo(1000,1);
+        }
+        $('<img src="background_retro.jpeg"/>'); //preload backgrounds
+        var page = 0; //declare variable
+        $(".container").eq(page).toggle(); //start on correct page
+
+        //listen for clicks on style icons, call the function above
+        $("#boat").click(function(){
+          styleChange("style_boat.css", "fa-anchor");
         });
         $("#retro").click(function() {
-          $("#style").attr("href", "style_retro.css");
-          $(".container").eq(page).css("visibility", "hidden");
-          $(".styles").css("visibility", "hidden");
-          $(".bookend").removeClass("fa-anchor fa-gamepad fa-square").addClass("fa-gamepad");
-          $(".container").eq(page).fadeTo(20,0).css("visibility", "visible").fadeTo(1000,1);
-          $(".styles").fadeTo(20,0).css("visibility", "visible").fadeTo(1000,1);
+          styleChange("style_retro.css", "fa-gamepad");
         });
         $("#mono").click(function() {
-          $("#style").attr("href", "style_mono.css");
-          $(".container").eq(page).css("visibility", "hidden");
-          $(".styles").css("visibility", "hidden");
-          $(".bookend").removeClass("fa-anchor fa-gamepad fa-square").addClass("fa-square");
-          $(".container").eq(page).fadeTo(20,0).css("visibility", "visible").fadeTo(1000,1);
-          $(".styles").fadeTo(20,0).css("visibility", "visible").fadeTo(1000,1);
+          styleChange("style_mono.css", "fa-square");
         });
+
+        //listen for clicks on the page change icons. perhaps will also listen for swipes
         $("#next").click(function() {
           $(".container").eq(page).toggle(1000);
           page += 1;
@@ -87,6 +87,22 @@
           $(".container").eq(page).toggle(1000);
         });
         $("#previous").click(function() {
+          $(".container").eq(page).toggle(1000);
+          page -= 1;
+          if (page < 0) {
+            page = $(".container").length-1;
+          }
+          $(".container").eq(page).toggle(1000);
+        });
+        $(window).on("swipeleft", function(event) {
+          $(".container").eq(page).toggle(1000);
+          page += 1;
+          if (page > $(".container").length-1) {
+            page = 0;
+          }
+          $(".container").eq(page).toggle(1000);
+        });
+        $(window).on("swiperight", function(event) {
           $(".container").eq(page).toggle(1000);
           page -= 1;
           if (page < 0) {
