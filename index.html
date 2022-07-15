@@ -48,6 +48,7 @@
       <i class="fa fa-2xl fa-anchor" aria-hidden="true" id="boat"></i>
       <i class="fa fa-2xl fa-gamepad" aria-hidden="true" id="retro"></i>
       <i class="fa fa-2xl fa-square" aria-hidden="true" id="mono"></i>
+      <i class="fa fa-2xl fa-gears" aria-hidden="true" id="ferris"></i>
       <i class="fa fa-2xl fa-circle" aria-hidden="true" id="polka"></i>
       <span>|</span>
       <i class="fa fa-2xl fa-angle-right" aria-hidden="true" id="next"></i>
@@ -59,11 +60,12 @@
           $("#style").attr("href", styleGuide);
           $(".container").eq(page).css("visibility", "hidden");
           $(".styles").css("visibility", "hidden");
-          $(".bookend").removeClass("fa-anchor fa-gamepad fa-square fa-circle").addClass(addedClass);
+          $(".bookend").removeClass("fa-anchor fa-gamepad fa-square fa-gears fa-circle").addClass(addedClass);
           $(".container").eq(page).fadeTo(20,0).css("visibility", "visible").fadeTo(1000,1);
           $(".styles").fadeTo(20,0).css("visibility", "visible").fadeTo(1000,1);
         }
         $('<img src="background_retro.jpeg"/>'); //preload backgrounds
+        $('<img src="background_gears.jpeg"/>');
         var page = 0; //declare variable
         $(".container").eq(page).toggle(); //start on correct page
 
@@ -76,6 +78,9 @@
         });
         $("#mono").click(function() {
           styleChange("style_mono.css", "fa-square");
+        });
+        $("#ferris").click(function() {
+          styleChange("style_gears.css", "fa-gears");
         });
         $("#polka").click(function() {
           styleChange("style_polka.css", "fa-circle");

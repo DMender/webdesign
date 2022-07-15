@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script&display=swap');
+body {
+  background-color: rgb(135, 206, 235) !important;
+  background: url('background_gears.jpeg');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+}
+.spacer {
+  height: 50px;
+}
+.container {
+  max-width: 500px;
+  margin: auto;
+  text-align: right;
+  color: black;
+  padding: 2rem;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.35);
+  border: 1px solid white;
+}
+.styles {
+  max-width: 500px;
+  margin: auto;
+  text-align: right;
+  color: white;
+  padding: 1rem;
+}
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 5rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+h2 {
+  font-family: 'Dancing Script', cursive;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 4rem;
+}
+h3 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+h4 {
+  font-family: 'Dancing Script', cursive;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 2rem;
+}
+span, p, a {
+  font-family: 'Bebas Neue', cursive;
+  color: white;
+}
+img {
+  width: 100%;
+  box-shadow: 15px -10px rgba(255, 255, 255, 0.35);;
+}
+.fa {
+}
+.styles .fa::before, .styles span {
+  font-size: 2.5rem;
+}
+.styles .fa::before {
+  font-size: 2.5rem;
+}
+.styles .fa:hover {
+  color: blue;
+}
+a:hover{
+  color: blue;
+}
+a:active {
+  color: white;
+}
+@media only screen and (min-width: 600px) {
+  .spacer {
+    height: 75px;
+  }
+  .styles .fa::before, .styles span {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .spacer {
+    height: 100px;
+  }
+  .styles .fa::before, .styles span {
+    font-size: 1rem;
+  }
+}
