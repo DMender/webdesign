@@ -34,6 +34,7 @@ h1 {
   font-size: 5rem;
   margin-bottom: 0;
   padding-bottom: 0;
+  max-width: 90vw;
 }
 h2 {
   font-family: 'Dancing Script', cursive;
@@ -46,7 +47,18 @@ span {
 }
 .fa {
 }
-
+.styles .fa:hover {
+  color: rgb(135, 206, 235)
+}
+a {
+  color: white;
+}
+a:hover{
+  color: rgb(135, 206, 235)
+}
+a:active {
+  color: white;
+}
 @media only screen and (min-width: 600px) {
   .spacer {
     height: 200px;

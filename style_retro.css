@@ -46,8 +46,19 @@ span {
 .fa {
   color: rgb(255, 255, 0);
   margin-right: 0.3rem;
-  }
-
+}
+.styles .fa:hover {
+  color: rgb(255, 0, 255);
+}
+a {
+  color: rgb(255, 0, 255);
+}
+a:hover{
+  color: rgb(255, 255, 0);
+}
+a:active {
+  color: rgb(255, 0, 255);
+}
 @media only screen and (min-width: 600px) {
   .spacer {
     height: 100px;
