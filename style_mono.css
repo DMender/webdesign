@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+VIC+WA+NT+Beginner&family=Roboto&display=swap');
 body {
-  background-color: black !important;
+  background-color: rgb(59, 59, 59) !important;
   background: url('background_star.jpeg');
   background-repeat: no-repeat;
   background-size: auto;
@@ -16,6 +16,7 @@ body {
   color: white;
   border-style:solid hidden;
   border-color: white;
+  border-width: 3px;
   padding: 2rem;
   display: none;
 }
@@ -54,7 +55,10 @@ span, p, a {
 }
 img {
   width: 100%;
-  border: 1px solid white;
+  padding: .3rem 0;
+  border-style: solid hidden;
+  border-color: white;
+  border-width: 3px;
 }
 .fa {
 }
