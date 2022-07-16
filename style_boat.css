@@ -62,6 +62,9 @@ img {
   width: 100%;
   border: 1px solid white;
 }
+img:hover{
+  border-color: rgb(135, 206, 235);
+}
 .fa {
 }
 .styles .fa::before, .styles span {

@@ -56,7 +56,8 @@ span, p, a {
 }
 img {
   width: 100%;
-  box-shadow: 15px -10px rgba(255, 255, 255, 0.35);;
+  box-shadow: 15px -10px rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.35);
 }
 .fa {
 }

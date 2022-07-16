@@ -13,7 +13,7 @@ body {
   max-width: 500px;
   margin: auto;
   text-align: right;
-  color: blue;
+  color: rgb(60,60,255);
   border: 2px solid white;
   border-radius: 100%;
   padding: 2rem;
@@ -37,6 +37,7 @@ h2 {
   margin-top: 0;
   padding-top: 0;
   margin-bottom: 4rem;
+  color: rgb(3,121,113);
 }
 h3 {
   font-family: 'Bebas Neue', cursive;
@@ -49,17 +50,23 @@ h4 {
   margin-top: 0;
   padding-top: 0;
   margin-bottom: 2rem;
+  color: rgb(3,121,113);
 }
 span, p, a {
   font-family: 'Bebas Neue', cursive;
   color: white;
 }
+p {}
 img {
   width: 100%;
   border: 2px solid white;
-  border-radius: 100%;
+  border-radius: 75px;
 }
-.fa {
+img:hover {
+  border: 2px dotted rgb(3,121,113);
+}
+.container .fa {
+  color: rgb(3,121,113);
 }
 .styles .fa::before, .styles span {
   font-size: 2.5rem;
@@ -68,10 +75,11 @@ img {
   font-size: 2.5rem;
 }
 .styles .fa:hover {
-  color: blue;
+  color: rgb(3,121,113);
 }
 a:hover{
-  color: blue;
+  color: rgb(3,121,113);
+  text-decoration-style: dotted;
 }
 a:active {
   color: white;
